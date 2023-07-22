@@ -20,9 +20,11 @@ const Form = () => {
             value={name}
             onChangeText={(value)=>{setName(value)}}
         />
+        <Text>{'\n\n'}</Text>
         <Button 
         title='Increment Age'
         onPress={Puem}/>
+        <Text>{'\n\n'}</Text>
         <Text>Hello,{name}. You are {ayu}</Text>
     </View>
   )
