@@ -1,18 +1,45 @@
-// import IncrementCounter from './components/IncrementCounter';
-// import Form from './components/Form';
-// import Login from './components/Login';
-// import RecapLogin from './components/RecapLogin';
-import TouchableExample from './components/TouchableExample';
+import { StatusBar } from 'expo-status-bar';
+
+import { StyleSheet, Text, View } from 'react-native';
+
+ 
+
+import RandomUserScreen from './components/RandomUserScreen';
+
+ 
 
 export default function App() {
+
   return (
 
-      {/* <IncrementCounter/> */}
-      {/* <Form/> */}
-      {/* <Login/> */}
-      {/* <RecapLogin/> */}
-      <View style = {{flex:1,justifyContent:'center',alignItems:'center'}}>
-        <TouchableExample/>
-      </View>
+    <View style={styles.container}>
+
+      <RandomUserScreen/>
+
+ 
+
     </View>
-);
+
+  );
+
+}
+
+ 
+
+const styles = StyleSheet.create({
+
+  container:{
+
+     flex:1,  
+
+     justifyContent:'center',    
+
+     alignItems:'center' ,
+
+     padding:5,
+
+     margin:10
+
+  }
+
+ })
