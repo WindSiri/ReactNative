@@ -4,7 +4,9 @@ import { StyleSheet, Text, View } from 'react-native';
 
  
 
-import RandomUserScreen from './components/RandomUserScreen';
+// import RandomUserScreen from './components/RandomUserScreen';
+// import FlatList_Example1 from './components/FlatList_Example1';
+import FlatList_HeaderFooter from './components/FlatList_HeaderFooter';
 
  
 
@@ -14,7 +16,9 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <RandomUserScreen/>
+      {/* {<RandomUserScreen/>} */}
+      {/* <FlatList_Example1/> */}
+      <FlatList_HeaderFooter/>
 
  
 
@@ -32,9 +36,9 @@ const styles = StyleSheet.create({
 
      flex:1,  
 
-     justifyContent:'center',    
+     justifyContent:'left',    
 
-     alignItems:'center' ,
+     alignItems:'left' ,
 
      padding:5,
 
