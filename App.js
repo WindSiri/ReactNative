@@ -1,53 +1,46 @@
-import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Button } from 'react-native'
+import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
-import { StyleSheet, Text, View } from 'react-native';
 
- 
-
-// import RandomUserScreen from './components/RandomUserScreen';
-// import FlatList_Example1 from './components/FlatList_Example1';
-//import FlatList_HeaderFooter from './components/FlatList_HeaderFooter';
-import FlatListAPI from './components/FlatListAPI';
-import News from './components/News';
-import ProductScreen from './components/ProductScreen';
- 
-
-export default function App() {
-
-  return (
-
-    <View style={styles.container}>
-
-      {/* {<RandomUserScreen/>} */}
-      {/* <FlatList_Example1/> */}
-      {/* <FlatList_HeaderFooter/> */}
-      {/* <FlatListAPI/> */}
-      {/* <News /> */}
-      <ProductScreen />
- 
-
+function HomeScreen({navigation}){
+  return(
+    <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
+      <Text>Home Screen</Text>
+      <Button
+       title='Go to Details'
+       onPress={()=>navigation.navigate('Details')}/>
     </View>
-
-  );
-
+  )
 }
 
- 
+function DetailsScreen(){
+  return(
+    <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
+      <Text>Details Screen</Text>
+    </View>
+  )
+}
 
-const styles = StyleSheet.create({
+const Stack = createNativeStackNavigator();
 
-  container:{
+const App = () => {
+  return (
+    
+    <NavigationContainer initialRouteName='Home'>
+      <Stack.Navigator>
+        <Stack.Screen 
+         name='Home' 
+         component={HomeScreen}
+         options={{title:'Overview'}}/>
+         <Stack.Screen name='Details' component={DetailsScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
 
-     flex:1,  
+  )
+}
 
-     justifyContent:'left',    
+export default App
 
-     alignItems:'left' ,
-
-     padding:5,
-
-     margin:10
-
-  }
-
- })
+const styles = StyleSheet.create({})
