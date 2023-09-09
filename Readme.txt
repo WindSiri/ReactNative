@@ -1,4 +1,4 @@
 StudentID : 2113210955
 StudentName : Navin Siripankaew
-DatetoStudy : 02/09/2566
-ClassTopic : React Navigator: Stack Navigator
+DatetoStudy : 09/09/2566
+ClassTopic : React Navigator: Stack Navigator ,Drawer Navigator
